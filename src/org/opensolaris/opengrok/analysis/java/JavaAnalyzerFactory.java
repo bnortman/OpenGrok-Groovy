@@ -40,6 +40,7 @@ public class JavaAnalyzerFactory extends FileAnalyzerFactory {
     private static final String[] SUFFIXES = {
         "JAVA",
         "AIDL",
+        "GROOVY",
     };
 
     public JavaAnalyzerFactory() {
