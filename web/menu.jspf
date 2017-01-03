@@ -52,7 +52,7 @@ org.opensolaris.opengrok.web.Util"
     ProjectHelper ph = ProjectHelper.getInstance(cfg);
     Set<Project> projects = ph.getAllProjects();
     if (projects == null) {
-        projects = new TreeSet<>();
+        projects = new TreeSet<Project>();
     }
     int projectsSize = ph.getAllUngrouped().size();
     if (ph.getGroups().size() > 0 && ph.getAllUngrouped().size() > 0)
@@ -61,7 +61,7 @@ org.opensolaris.opengrok.web.Util"
         projectsSize++;
         projectsSize += ph.getAllGrouped(group).size();
     }
-    TreeMap<String, String> pMap = new TreeMap<>();
+    TreeMap<String, String> pMap = new TreeMap<String,String>();
     QueryBuilder queryParams = cfg.getQueryBuilder();
     if (projects.size() != 0) {
         for (Project p : projects) {
